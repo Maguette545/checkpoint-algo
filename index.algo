@@ -4,6 +4,10 @@ VAR
     nbcaractere,i,nbmot,nbvoyelle:INTEGER;
     
 BEGIN
+    nbcaractere=0
+    nbmot=1
+    nbvoyelle=0
+    
     write ("Saisir la phrase qui se termine avec un point") ;
     read(phrase);
    WHILE (phrase[i]<>".") DO
@@ -20,8 +24,8 @@ BEGIN
    write("le nombre de mot est:" nbmot);
 
    FOR i FROM 0 TO nbcaractere-1 STEP 1  DO
-        IF (phrase[i]==i ou phrase[i]==o ou phrase[i]==a ou phrase[i]==e ou phrase[i]==u ou phrase[i]==y) THEN
-            nbvoyelle=nbvoyelle+1
+        IF (phrase[i]=="i" or phrase[i]=="o" or phrase[i]=="a" or phrase[i]=="e" or phrase[i]=="u" or phrase[i]=="y" or phrase[i]=="I" or phrase[i]=="O" or phrase[i]=="A" or phrase[i]=="E" or phrase[i]=="U" or phrase[i]=="Y") THEN
+            nbvoyelle++
         END_IF
    END_FOR
    write("le nombre de voyelle est:" nbvoyelle);
