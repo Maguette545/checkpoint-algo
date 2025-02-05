@@ -1,0 +1,29 @@
+ALGORITHM algorithm_name
+VAR
+    phrase:STRING;
+    nbcaractere,i,nbmot,nbvoyelle:INTEGER;
+    
+BEGIN
+    write ("Saisir la phrase qui se termine avec un point") ;
+    read(phrase);
+   WHILE (phrase[i]<>".") DO
+    nbcaractere = nbcaractere + 1;
+    i++
+   END_WHILE
+   write("le nombre de caractere est:" nbcaractere);
+
+   FOR i FROM 0 TO nbcaractere-1 STEP 1  DO
+        IF (phrase[i]==' ') THEN
+            nbmot=nbmot+1
+        END_IF
+   END_FOR
+   write("le nombre de mot est:" nbmot);
+
+   FOR i FROM 0 TO nbcaractere-1 STEP 1  DO
+        IF (phrase[i]==i ou phrase[i]==o ou phrase[i]==a ou phrase[i]==e ou phrase[i]==u ou phrase[i]==y) THEN
+            nbvoyelle=nbvoyelle+1
+        END_IF
+   END_FOR
+   write("le nombre de voyelle est:" nbvoyelle);
+
+END
